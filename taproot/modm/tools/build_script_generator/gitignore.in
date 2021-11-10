@@ -1,3 +1,0 @@
-%% for entry in gitignore
-{{ entry }}
-%% endfor

@@ -24,13 +24,17 @@ namespace control
 /* define subsystems --------------------------------------------------------*/
     ChassisSubsystem chassissub(drivers());
     ChassisTankDriverCommand tankdrive(drivers());
-
+    AgitatorSubsystem agitator(drivers());
+    
 /* define commands ----------------------------------------------------------*/
 
 /* define command mappings --------------------------------------------------*/
 
 /* register subsystems here -------------------------------------------------*/
-void registerSoldierSubsystems(tap::Drivers *drivers) {}
+void registerSoldierSubsystems(tap::Drivers *drivers) {
+
+}
+
 
 /* initialize subsystems ----------------------------------------------------*/
 void initializeSubsystems() {}

@@ -1,6 +1,0 @@
-*.pyc
-single/
-raw-device-data
-raw-device-data/
-cmsis-header-cache/
-ext/

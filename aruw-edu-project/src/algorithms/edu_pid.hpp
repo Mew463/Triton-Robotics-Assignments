@@ -36,7 +36,20 @@ public:
      * @see tap::arch::clock for measuring time.
      * @return the new output calculated by the PID controller.
      */
-    float runControllerDerivateError(float error, float dt);
+    float runControllerDerivateError(float error, float dt) {
+        float sumError += error;
+        currErrorP = kp * error
+        currErrorI = ki * sumError * dt;
+        currErrorD = kd * (erorr - prevError) * dt
+
+        tap::algorithms::limitVal(currErrorI, 0, maxICumulative);
+
+        float output =  currErrorP + currErrorI + currErrorD;
+        prevError = error;
+        tap::algorithms::limitVal(output, 0, maxOutput);
+        return output;
+    }
+    
 
     /**
      * @return the last output calculated during `runControllerDerivativeError`.
